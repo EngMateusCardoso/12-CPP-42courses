@@ -35,7 +35,7 @@ clean:
 	@$(RM) $(OBJ) $(OBJ_PATH)
 	@printf "$(RE)Objects removed!$(RC)\n"
 
-fclean:
+fclean: clean
 	@$(RM) $(NAME)
 	@printf "$(RE)$(NAME) removed!$(RC)\n"
 

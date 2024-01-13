@@ -2,13 +2,11 @@
 
 // Constructor
 Contact::Contact(void) {
-	std::cout << "Contact constructor called" << std::endl;
 	return;
 }
 
 // Destructor
 Contact::~Contact(void) {
-	std::cout << "Contact destructor called" << std::endl;
 	return;
 }
 
@@ -64,4 +62,5 @@ void		Contact::displayContact(void) const {
 	std::cout << "Nickname: " << this->_nickname << std::endl;
 	std::cout << "Phone number: " << this->_phoneNumber << std::endl;
 	std::cout << "Darkest secret: " << this->_darkestSecret << std::endl;
+	std::cout << std::endl;
 }
