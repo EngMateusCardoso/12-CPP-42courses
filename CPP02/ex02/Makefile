@@ -1,11 +1,9 @@
-NAME		= zombies
+NAME		= fixed
 
-SRC			= main.cpp		\
-			Zombie.cpp		\
-			newZombie.cpp	\
-			randomChump.cpp	\
+SRC			= main.cpp	\
+			Fixed.cpp
 
-INC			= Zombie.hpp
+INC			= Fixed.hpp
 
 OBJ_PATH	= obj/
 OBJ			= $(addprefix $(OBJ_PATH), $(SRC:.cpp=.o))

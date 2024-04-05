@@ -1,9 +1,9 @@
-NAME = GlobalBanksters
+NAME		= fixed
 
-SRC			= tests.cpp		\
-			Account.cpp	
+SRC			= main.cpp	\
+			Fixed.cpp
 
-INC			= Account.hpp
+INC			= Fixed.hpp
 
 OBJ_PATH	= obj/
 OBJ			= $(addprefix $(OBJ_PATH), $(SRC:.cpp=.o))
