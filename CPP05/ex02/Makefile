@@ -1,11 +1,17 @@
 NAME		= bureaucrat
 
-SRC			= main.cpp		\
-			Bureaucrat.cpp	\
-			Form.cpp
+SRC			= main.cpp					\
+			Bureaucrat.cpp				\
+			AForm.cpp					\
+			ShrubberyCreationForm.cpp	\
+			RobotomyRequestForm.cpp		\
+			PresidentialPardonForm.cpp
 
-INC			= Bureaucrat.hpp	\
-			Form.hpp
+INC			= Bureaucrat.hpp			\
+			AForm.hpp					\
+			ShrubberyCreationForm.hpp	\
+			RobotomyRequestForm.hpp		\
+			PresidentialPardonForm.hpp
 
 OBJ_PATH	= obj/
 OBJ			= $(addprefix $(OBJ_PATH), $(SRC:.cpp=.o))

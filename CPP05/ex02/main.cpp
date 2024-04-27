@@ -1,10 +1,13 @@
 #include "Bureaucrat.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 int main() {
 	std::cout << std::endl;
 	std::cout << "BUREAUCRAT TEST: " << std::endl;
 	std::cout << "--------------------------------------------------------------" << std::endl;
-    std::cout << "Catches exception with increments ->" << std::endl;
+	std::cout << "Catches exception with increments ->" << std::endl;
 	try {
 		Bureaucrat bureaucrat1("João", 2);
 		std::cout << bureaucrat1;
@@ -43,41 +46,58 @@ int main() {
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
-    std::cout << "--------------------------------------------------------------" << std::endl;
-    std::cout << "--------------------------------------------------------------" << std::endl;
-    std::cout << "--------------------------------------------------------------" << std::endl;
-    std::cout << "FORM TEST: " << std::endl;
-    std::cout << "--------------------------------------------------------------" << std::endl;
-    std::cout << "Too low signForm exception, increment and sign ->" << std::endl;
-    try {
-		Form form1("Form1", 2, 2);
-        std::cout << form1;
-        Bureaucrat bureaucrat5("Maria", 3);
-        std::cout << bureaucrat5;
-        bureaucrat5.signForm(form1);
-        std::cout << form1;
-        bureaucrat5.incrementGrade();
-        std::cout << bureaucrat5;
-        bureaucrat5.signForm(form1);
-        std::cout << form1;
+	std::cout << "--------------------------------------------------------------" << std::endl;
+	std::cout << "--------------------------------------------------------------" << std::endl;
+	std::cout << "--------------------------------------------------------------" << std::endl;
+	std::cout << "FORM TEST: " << std::endl;
+	std::cout << "--------------------------------------------------------------" << std::endl;
+	std::cout << "ShrubberyCreationForm test: ----------------------------------" << std::endl;
+	try {
+		Bureaucrat bureaucrat("Jardineiro", 138);
+		std::cout << bureaucrat;
+		ShrubberyCreationForm form("home");
+		std::cout << form;
+		bureaucrat.executeForm(form); 
+		bureaucrat.signForm(form);
+		std::cout << form;
+		bureaucrat.executeForm(form); 
+		bureaucrat.incrementGrade();
+		std::cout << bureaucrat;
+		bureaucrat.executeForm(form);
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
-    std::cout << "---------------------------------------------------------------" << std::endl;
-    std::cout << "Sign, decrement and too low signForm exception ->" << std::endl;
-    try {
-        Form form2("Form2", 100, 100);
-        std::cout << form2;
-        Bureaucrat bureaucrat6("Bruno", 100);
-        std::cout << bureaucrat6;
-        bureaucrat6.signForm(form2);
-        std::cout << form2;
-        bureaucrat6.decrementGrade();
-        std::cout << bureaucrat6;
-		bureaucrat6.signForm(form2);
-		std::cout << form2;
+	std::cout << "--------------------------------------------------------------" << std::endl;
+	std::cout << "RobotomyRequestForm test: ------------------------------------" << std::endl;
+	try {
+		Bureaucrat bureaucrat("Tec de Robótica", 46);
+		std::cout << bureaucrat;
+		RobotomyRequestForm form("Robô");
+		std::cout << form;
+		bureaucrat.signForm(form);
+		std::cout << form;
+		bureaucrat.executeForm(form);
+		bureaucrat.incrementGrade();
+		std::cout << bureaucrat;
+		bureaucrat.executeForm(form);
 	} catch (std::exception &e) {
-        std::cout << e.what() << std::endl;
-    }
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << "--------------------------------------------------------------" << std::endl;
+	std::cout << "PresidentialPardonForm test: ---------------------------------" << std::endl;
+	try {
+		Bureaucrat bureaucrat("Presidente", 6);
+		std::cout << bureaucrat;
+		PresidentialPardonForm form("Ladrão");
+		std::cout << form;
+		bureaucrat.signForm(form);
+		std::cout << form;
+		bureaucrat.executeForm(form);
+		bureaucrat.incrementGrade();
+		std::cout << bureaucrat;
+		bureaucrat.executeForm(form);
+	} catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
 	std::cout << "End" << std::endl;
 }
