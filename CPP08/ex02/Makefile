@@ -1,8 +1,8 @@
-NAME		= array
+NAME		= mutantstack
 
 SRC			= main.cpp
 
-INC			= Array.hpp
+INC			= MutantStack.hpp
 
 OBJ_PATH	= obj/
 OBJ			= $(addprefix $(OBJ_PATH), $(SRC:.cpp=.o))
