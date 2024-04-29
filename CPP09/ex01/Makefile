@@ -1,8 +1,9 @@
-NAME		= mutantstack
+NAME		= RPN
 
-SRC			= main.cpp
+SRC			= main.cpp	\
+			RPN.cpp
 
-INC			= MutantStack.hpp
+INC			= RPN.hpp
 
 OBJ_PATH	= obj/
 OBJ			= $(addprefix $(OBJ_PATH), $(SRC:.cpp=.o))
