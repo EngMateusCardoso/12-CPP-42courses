@@ -1,8 +1,9 @@
-NAME		= mutantstack
+NAME		= PmergeMe
 
-SRC			= main.cpp
+SRC			= main.cpp	\
+			PmergeMe.cpp
 
-INC			= MutantStack.hpp
+INC			= PmergeMe.hpp
 
 OBJ_PATH	= obj/
 OBJ			= $(addprefix $(OBJ_PATH), $(SRC:.cpp=.o))

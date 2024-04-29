@@ -28,6 +28,7 @@ void BitcoinExchange::_extractDatabase(void) {
 	if (!_validateHeader(line, DATABASE))
 		throw InvalidDatabaseException();
 	else {
+		this->_database["1970-01-02"] = 0.0;
 		while (std::getline(file, line)) {
 			date = line.substr(0, line.find(','));
 			value = line.substr(line.find(',') + 1);
